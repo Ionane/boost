@@ -1,127 +1,118 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ionane - LoL Coaching & Boost</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #1e1e2f;
-      color: #eee;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #3a3a66;
-      padding: 20px;
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: bold;
-      letter-spacing: 2px;
-      color: #836b82;
-      text-shadow: 1px 1px 4px #000;
-    }
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    section {
-      margin-bottom: 40px;
-      background: #2e2e4d;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.533);
-    }
-    h2 {
-      text-align: center;
-      border-bottom: 2px solid #832424;
-      padding-bottom: 8px;
-      margin-bottom: 15px;
-      color: #b3b3b3;
-    }
-    p {
-      text-align: center;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .offer {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .card {
-      background: #444675;
-      border-radius: 8px;
-      padding: 15px 20px;
-      width: 280px;
-      box-shadow: 0 0 8px #0006;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #ffd700;
-    }
-    .price {
-      font-weight: bold;
-      font-size: 1.3rem;
-      margin: 10px 0;
-      color: #ffa500;
-    }
-    button {
-      background: #ffd700;
-      border: none;
-      padding: 10px 15px;
-      font-weight: bold;
-      color: #1e1e2f;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-      width: 100%;
-    }
-    button:hover {
-      background: #ffb800;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #3a3a66;
-      color: #ccc;
-      font-size: 0.9rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ionane - LoL Boosting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Tmavě šedá */
+        }
+        .card {
+            background-color: #1F2937; /* Tmavší šedá */
+            border: 1px solid #374151; /* Světlejší šedý okraj */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2), 0 4px 6px -2px rgba(59, 130, 246, 0.1);
+        }
+        .btn-discord {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-discord:hover {
+            transform: scale(1.05);
+        }
+        h1, h2 {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Definice Keyframe animace pro "dýchání" */
+        @keyframes breathe {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3);
+            }
+            50% {
+                text-shadow: 0 0 25px rgba(59, 130, 246, 1), 0 0 50px rgba(59, 130, 246, 0.7);
+            }
+        }
+
+        /* Třída pro aplikaci glow efektu */
+        .glow {
+            animation: breathe 4s ease-in-out infinite;
+        }
+    </style>
 </head>
-<body>
-  <header>Ionane - LoL Boosting</header>
-  <main>
-    <section>
-      <h2>O mně</h2>
-      <p>nabizim solo boost uctu v LoL z nizsich ranku (iron az platina). duoq neni mozny. cena domluvou — vetsinou skoro zadarmo, staci mi na par energetaku.</p>
-    </section>
+<body class="text-gray-200">
 
-<h2>Moje nabídka</h2>
+    <!-- Kontejner pro celou stránku -->
+    <div class="container mx-auto px-4 py-8 md:py-16">
 
-    <section>
-        <div class="card">
-          <h3>Boost na rank</h3>
-          <p>pomohu ti rychle postoupit do vyssiho ranku dle dohody.</p>
-          <div class="price">cena dohodou</div>
-      
-      </div>
-    </section>
+        <!-- Hlavička -->
+        <header class="text-center mb-12 md:mb-20">
+            <h1 class="text-4xl md:text-6xl font-bold text-white tracking-tight">Ionane - <span class="text-blue-400 glow">LoL Boosting</span></h1>
+            <p class="text-gray-400 mt-2 text-lg">Rychle a spolehlivě na váš vysněný rank.</p>
+        </header>
 
-    <section>
-      <h2>Kontakt</h2>
-      <p> <a href="https://discord.gg/23U8kMRN" style="color:lightblue">Discord</a> 
-    </section>
-  </main>
-  <footer>
-  Ionane
-  </footer>
+        <!-- Hlavní obsah -->
+        <main class="max-w-4xl mx-auto grid gap-8">
+
+            <!-- Sekce "O mně" -->
+            <section id="about" class="card p-6 md:p-8 rounded-xl">
+                <div class="flex items-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-white">O mně</h2>
+                </div>
+                <p class="text-gray-300 leading-relaxed">
+                    Nabízím solo boost účtů v League of Legends z nižších ranků (Iron až Platinum). DuoQ bohužel není možné. Cena je vždy na domluvě – často to dělám skoro zadarmo, odměnou je pro mě radost ze hry a třeba pár energeťáků na delší sezení.
+                </p>
+            </section>
+
+            <!-- Sekce "Nabídka" -->
+            <section id="offer" class="card p-6 md:p-8 rounded-xl">
+                 <div class="flex items-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
+                    </svg>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-white">Moje nabídka</h2>
+                </div>
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-blue-400">Boost na rank</h3>
+                    <p class="text-gray-300 mt-2 mb-4">Pomohu ti rychle a efektivně postoupit do vyššího ranku přesně podle dohody. Zaručuji diskrétnost a profesionální přístup.</p>
+                    <div class="text-lg font-semibold text-white bg-blue-500/20 border border-blue-400/50 inline-block px-4 py-2 rounded-md">
+                        Cena dohodou
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sekce "Kontakt" -->
+            <section id="contact" class="card p-6 md:p-8 rounded-xl text-center">
+                 <div class="flex items-center justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-white">Kontakt</h2>
+                </div>
+                <p class="text-gray-300 mb-6">Máš zájem nebo dotaz? Neváhej se ozvat na Discordu!</p>
+                <a href="https://discord.com/invite/23U8kMRN" target="_blank" rel="noopener noreferrer" class="btn-discord inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg">
+                    Přejít na Discord
+                </a>
+            </section>
+
+        </main>
+
+        <!-- Patička -->
+        <footer class="text-center text-gray-500 mt-12 md:mt-20">
+            <p>&copy; 2024 Ionane. Všechna práva vyhrazena.</p>
+        </footer>
+
+    </div>
 </body>
 </html>
